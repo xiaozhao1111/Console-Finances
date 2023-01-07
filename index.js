@@ -1,3 +1,4 @@
+// starter code containing the finance data
 var finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
@@ -86,3 +87,66 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+console.log("Financial Analysis");
+console.log("----------------------------");
+
+//create a variable to store the total number of the months in the financial data
+// display the total number of the months
+let monthNum = finances.length;
+console.log("Total Months: " + monthNum );
+
+
+// create a variable to store the net total amount of Profit/Losses over the entire period
+let sumProfit = 0;
+function calSum() {
+    for(let i=0; i < monthNum; i++) {
+    sumProfit += finances[i][1];
+    }
+}
+
+
+// create a 2D array to store the changes in profits from month to month
+let changes = Array.from(Array(monthNum), ()=> new Array(2)); 
+changes[0] = ['Jan-2010', 867884] // initialize the first element of change as same as the profit in the first month
+
+// claculate the changes in profits from month to month
+for(let i=1; i<monthNum; i++) {
+    changes[i][0] = finances[i][0];
+    changes[i][1] = finances[i][1] -finances[i-1][1];
+}
+
+// create total and average of the changes in Profit/Losses over the entire period
+let totalChanges = 0;
+let averageChanges = 0;
+
+// console.log(changes);  display the changes array for a quick check
+
+// calculate the total changes in Profit/Losses over the entire period
+for (let i=0; i<monthNum; i++) {
+    totalChanges += changes[i][1];
+}
+averageChanges = totalChanges/monthNum;
+console.log("Average  Change: " + averageChanges.toFixed(2)); // display the average change and set the number up to 2 decimals using the toFixed() method
+
+// create two variables to store the greatest increase and decrease in profits over the entire period
+let maxIncrease = ["",0];
+let maxDecrease = ["",0];
+
+for(let i=0; i<monthNum; i++) {
+    if(maxIncrease[1]<changes[i][1]) {
+        maxIncrease = changes[i];
+    }
+    if(maxDecrease[1]>changes[i][1]) {
+        maxDecrease = changes[i];
+    }
+}
+console.log("Greatest Increase in Profits: " + maxIncrease[0] + " ($" + maxIncrease[1] + ")");
+
+console.log("Decrease in Profits: " + maxDecrease[0] + " ($" + maxDecrease[1] +")");
+
+
+
+// console.log(monthNum);
+// console.log(sumProfit)
+// console.log(averageChanges);
