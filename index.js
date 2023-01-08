@@ -87,6 +87,10 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+// create a variable to store the element of the textarea to output the profit datasheet. Then display the datasheet in the webpage.
+let profitDataEl = document.getElementById("profitData");
+profitDataEl.textContent = finances.join("\r\n")
+
 
 console.log("Financial Analysis");
 console.log("----------------------------");
@@ -150,3 +154,16 @@ console.log("Decrease in Profits: " + maxDecrease[0] + " ($" + maxDecrease[1] +"
 // console.log(monthNum);
 // console.log(sumProfit)
 // console.log(averageChanges);
+
+// Create a function to open report in browser when the button was clicked
+let reportEl = document.getElementById("report");
+
+function openReport() {
+    
+    reportEl.innerText = "Financial Analysis\r\n";
+    reportEl.innerText += "----------------------------\r\n";
+    reportEl.innerText += "Total Months: " + monthNum+ "\r\n";
+    reportEl.innerText += "Average  Change: " + averageChanges.toFixed(2) + "\r\n";
+    reportEl.innerText += "Greatest Increase in Profits: " + maxIncrease[0] + " ($" + maxIncrease[1] + ")" +"\r\n";
+    reportEl.innerText += "Decrease in Profits: " + maxDecrease[0] + " ($" + maxDecrease[1] +")";
+}

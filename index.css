@@ -1,0 +1,28 @@
+* {
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: beige;
+}
+
+textarea {
+    background-color: white;
+    text-align: left;
+}
+
+button {
+    border: none;
+    font-weight: bold;
+    font-size: large;
+    color: blue;
+}
+button:hover {
+    color: blueviolet;
+    text-decoration: underline;
+}
+#report {
+    width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
