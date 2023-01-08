@@ -11,7 +11,7 @@ The datasheet is composed of arrays with two fields, Date and Profit/Losses. The
 
 * The net total amount of Profit/Losses over the entire period.
 
-* The average of the changes in Profit/Losses over the entire period. PS: the changes in Profit/Losses of the first month in the datasheet are equal to the value of the Profit/Losses.
+* The average of the changes in Profit/Losses over the entire period. PS: for the first month, the changes in Profit/Losses are equal to  the Profit/Losses in the first month.
 
 * The greatest increase in profits (date and amount) over the entire period.
 
@@ -21,13 +21,7 @@ The datasheet is composed of arrays with two fields, Date and Profit/Losses. The
 
 * The result should look similat to the following:
 
-Financial Analysis
-----------------------------
-Total Months: 25
-Total: $2561231
-Average  Change: $-2315.12
-Greatest Increase in Profits: Feb-2012 ($1926159)
-Greatest Decrease in Profits: Sep-2013 ($-2196167)
+![report-format](/images/report-format.png)
 
 * The financial analysis report should be printed to the console. As a bonus, the financial datasheet and analysis report were also dispalyed in the webpage.
 
