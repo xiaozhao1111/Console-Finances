@@ -108,6 +108,8 @@ function calSum() {
     sumProfit += finances[i][1];
     }
 }
+calSum();
+console.log("Total profit: $" + sumProfit);
 
 
 // create a 2D array to store the changes in profits from month to month
@@ -131,7 +133,7 @@ for (let i=0; i<monthNum; i++) {
     totalChanges += changes[i][1];
 }
 averageChanges = totalChanges/monthNum;
-console.log("Average  Change: " + averageChanges.toFixed(2)); // display the average change and set the number up to 2 decimals using the toFixed() method
+console.log("Average  Change: $" + averageChanges.toFixed(2)); // display the average change and set the number up to 2 decimals using the toFixed() method
 
 // create two variables to store the greatest increase and decrease in profits over the entire period
 let maxIncrease = ["",0];
@@ -163,7 +165,8 @@ function openReport() {
     reportEl.innerText = "Financial Analysis\r\n";
     reportEl.innerText += "----------------------------\r\n";
     reportEl.innerText += "Total Months: " + monthNum+ "\r\n";
-    reportEl.innerText += "Average  Change: " + averageChanges.toFixed(2) + "\r\n";
+    reportEl.innerText += "Total profit: $" + sumProfit +"\r\n";
+    reportEl.innerText += "Average  Change: $" + averageChanges.toFixed(2) + "\r\n";
     reportEl.innerText += "Greatest Increase in Profits: " + maxIncrease[0] + " ($" + maxIncrease[1] + ")" +"\r\n";
     reportEl.innerText += "Decrease in Profits: " + maxDecrease[0] + " ($" + maxDecrease[1] +")";
 }
