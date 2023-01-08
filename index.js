@@ -153,9 +153,7 @@ console.log("Greatest Decrease in Profits: " + maxDecrease[0] + " ($" + maxDecre
 
 
 
-// console.log(monthNum);
-// console.log(sumProfit)
-// console.log(averageChanges);
+
 
 // Create a function to open report in browser when the button was clicked
 let reportEl = document.getElementById("report");
