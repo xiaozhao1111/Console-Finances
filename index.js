@@ -149,7 +149,7 @@ for(let i=0; i<monthNum; i++) {
 }
 console.log("Greatest Increase in Profits: " + maxIncrease[0] + " ($" + maxIncrease[1] + ")");
 
-console.log("Decrease in Profits: " + maxDecrease[0] + " ($" + maxDecrease[1] +")");
+console.log("Greatest Decrease in Profits: " + maxDecrease[0] + " ($" + maxDecrease[1] +")");
 
 
 
@@ -168,5 +168,5 @@ function openReport() {
     reportEl.innerText += "Total profit: $" + sumProfit +"\r\n";
     reportEl.innerText += "Average  Change: $" + averageChanges.toFixed(2) + "\r\n";
     reportEl.innerText += "Greatest Increase in Profits: " + maxIncrease[0] + " ($" + maxIncrease[1] + ")" +"\r\n";
-    reportEl.innerText += "Decrease in Profits: " + maxDecrease[0] + " ($" + maxDecrease[1] +")";
+    reportEl.innerText += "Greatest Decrease in Profits: " + maxDecrease[0] + " ($" + maxDecrease[1] +")";
 }
