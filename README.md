@@ -19,7 +19,7 @@ The datasheet is composed of arrays with two fields, Date and Profit/Losses. The
 
 ## The format of the resulting analysis
 
-* The result should look similat to the following:
+* The result should look similar to the following:
 
 ![report-format](/images/report-format.png)
 
