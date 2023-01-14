@@ -33,7 +33,7 @@ Here is the scrrenshot of the deployed webpage.
 ![Bootstrap portfolio webpage](/images/webpage.png)
 
 ## Contribution
-Xiao Zhao, xiaozhao20071106@gmail.com
+Xiao Zhao, zhaoxiao20071106@gmail.com
 
 ## Community
 It's open-source. Feel free to use it for learning purpose.
